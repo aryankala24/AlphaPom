@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .default-home {
+    @apply bg-white text-black;
+  }
+
+  .dark-home {
+    @apply bg-gray-900 text-white;
+  }
+
+  .sunset-bliss {
+    @apply bg-gradient-to-br from-orange-300 to-pink-500 text-white;
+  }
+
+  .neon-vibes {
+    @apply bg-black text-neon-green;
+  }
+}
+
+/* ========== Starry Background ========== */
+.bg-stars {
+  background-image: url('/images/stars.png'); /* Make sure this image exists in public/images */
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+/* ========== Twinkle Animation ========== */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+.animate-twinkle {
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+/* ========== Fade and Slide Up Animation ========== */
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-slide-up {
+  animation: fade-slide-up 0.8s ease-out both;
+}
+
+/* ========== Pulse Slow (for bokeh effects) ========== */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* ========== Pulse Slower (optional variant) ========== */
+@keyframes pulse-slower {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.25;
+  }
+}
+.animate-pulse-slower {
+  animation: pulse-slower 6s ease-in-out infinite;
+}
+
+/* ========== Optional: Scrollbar Hiding ========== */
+body {
+  overflow-x: hidden;
+}
+
+/* ========== Smooth Transitions ========== */
+* {
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+.theme-minimal-light {
+  background-color: #ffffff;
+  color: #1f2937; /* Tailwind gray-900 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-minimal-dark {
+  background-color: #111827; /* Tailwind gray-900 */
+  color: #f9fafb; /* Tailwind gray-50 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-purple-dream {
+  background-color: #6b21a8; /* Tailwind purple-800 */
+  color: #ddd6fe; /* Tailwind purple-200 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-sunset-glow {
+  background-color: #f97316; /* Tailwind orange-500 */
+  color: #fef3c7; /* Tailwind yellow-100 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-mountain-mist {
+  background-color: #9ca3af; /* Tailwind gray-400 */
+  color: #1f2937; /* Tailwind gray-900 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-ocean-breeze {
+  background-color: #60a5fa; /* Tailwind blue-400 */
+  color: #ffffff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-forest-calm {
+  background-color: #047857; /* Tailwind green-700 */
+  color: #d1fae5; /* Tailwind green-100 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-night-sky {
+  background-color: #312e81; /* Tailwind indigo-900 */
+  color: #c7d2fe; /* Tailwind indigo-200 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.theme-desert-gold {
+  background-color: #fbbf24; /* Tailwind yellow-400 */
+  color: #78350f; /* Tailwind yellow-900 */
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
